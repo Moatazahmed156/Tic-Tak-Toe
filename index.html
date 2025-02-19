@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <link rel="icon" type="image/x-icon" href="icon.png">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <title>Tic-Tac-Toe</title>
-
 </head>
 
 <body>
@@ -29,8 +27,8 @@
                 <p id="playerOScore" class="score">Score: 0</p>
             </div>
         </div>
-
-        <div class="board">
+        <div class="board" id="board">
+            <div id="roundContainer"></div>
             <div class="row up">
                 <div class="cell up_left" onclick="makeMove(0, 0)"></div>
                 <div class="cell up_center" onclick="makeMove(0, 1)"></div>
@@ -47,7 +45,6 @@
                 <div class="cell low_right" onclick="makeMove(2, 2)"></div>
             </div>
         </div>
-
     </div>
     <script src="script.js"></script>
 </body>
