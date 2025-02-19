@@ -160,13 +160,19 @@ function endGame(message) {
   document.body.appendChild(div);
 }
 
+let n = 1;
 function resetGame() {
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
       board[i][j] = " ";
     }
   }
-
+  if (n % 2 == 0) {
+    currentPlayer = "X";
+  } else {
+    currentPlayer = "O";
+  }
+  n++;
   gameOver = false;
   document.querySelector(".popup").remove();
   displayBoard();
