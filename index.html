@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Tic-Tac-Toe</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="players ">
+            <div class="p1">
+                <img src="p1.png" alt="" width="100px">
+                <p id="playerXName">Player X</p>
+                <input class="in" id="myInput" type="text" placeholder="Enter Name">
+                <button id="submit1" class="submit" onclick="NameXHandel()">Submit</button>
+                <p id="playerXscore" class="score">Score: 0</p>
+            </div>
+            <div class="p2">
+                <img src="p2.png" alt="" width="100px">
+                <p id="playerOName">Player O</p>
+                <input class="in" id="secInput" type="text" placeholder="Enter Name">
+                <button id="submit2" class="submit" onclick="NameOHandel()">Submit</button>
+                <p id="playerOScore" class="score">Score: 0</p>
+            </div>
+        </div>
+
+        <div class="board">
+            <div class="row up">
+                <div class="cell up_left" onclick="makeMove(0, 0)"></div>
+                <div class="cell up_center" onclick="makeMove(0, 1)"></div>
+                <div class="cell up_right" onclick="makeMove(0, 2)"></div>
+            </div>
+            <div class="row mid">
+                <div class="cell mid_left" onclick="makeMove(1, 0)"></div>
+                <div class="cell mid_center" onclick="makeMove(1, 1)"></div>
+                <div class="cell mid_right" onclick="makeMove(1, 2)"></div>
+            </div>
+            <div class="row low">
+                <div class="cell low_left" onclick="makeMove(2, 0)"></div>
+                <div class="cell low_center" onclick="makeMove(2, 1)"></div>
+                <div class="cell low_right" onclick="makeMove(2, 2)"></div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
