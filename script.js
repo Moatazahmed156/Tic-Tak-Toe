@@ -3,14 +3,20 @@ const board = [
   [" ", " ", " "],
   [" ", " ", " "],
 ];
-
 let currentPlayer = "X";
 let p1 = 0;
 let p2 = 0;
 let gameOver = false;
 let playerNames = { X: "Player X", O: "Player O" };
+
+let playerRound = document.createElement("h2");
+playerRound.className = "playerRound";
+playerRound.textContent = `${playerNames[currentPlayer]} Round`;
+let roundContainer = document.getElementById("roundContainer");
+roundContainer.appendChild(playerRound);
+
 function displayBoard() {
-  const cells = document.querySelectorAll(".cell");
+  let cells = document.querySelectorAll(".cell");
   let index = 0;
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
@@ -37,12 +43,11 @@ function makeMove(row, col) {
   }
   if (checkDraw()) {
     gameOver = true;
-    draw++;
-    updateScores();
     endGame("It's a Draw!");
     return;
   }
   currentPlayer = currentPlayer === "X" ? "O" : "X";
+  playerRound.textContent = `${playerNames[currentPlayer]} Round`;
 }
 function checkWin(player) {
   let winPatterns = [
@@ -110,7 +115,6 @@ function NameXHandel() {
   let input = document.getElementById("myInput");
   let button = document.getElementById("submit1");
   let nameDisplay = document.getElementById("playerXName");
-
   if (input.value.trim() !== "") {
     playerNames.X = input.value;
     nameDisplay.textContent = input.value;
@@ -125,6 +129,7 @@ function NameOHandel() {
   let input = document.getElementById("secInput");
   let button = document.getElementById("submit2");
   let nameDisplay = document.getElementById("playerOName");
+  playerRound.textContent = `${playerNames[currentPlayer]} Round`;
 
   if (input.value.trim() !== "") {
     playerNames.O = input.value;
@@ -159,7 +164,6 @@ function endGame(message) {
   div.appendChild(buttons);
   document.body.appendChild(div);
 }
-
 let n = 1;
 function resetGame() {
   for (let i = 0; i < 3; i++) {
@@ -172,6 +176,7 @@ function resetGame() {
   } else {
     currentPlayer = "O";
   }
+  playerRound.textContent = `${playerNames[currentPlayer]} Round`;
   n++;
   gameOver = false;
   document.querySelector(".popup").remove();
