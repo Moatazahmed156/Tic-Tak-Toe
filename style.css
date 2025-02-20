@@ -44,6 +44,7 @@ body {
   justify-content: center;
   border: 1px solid white;
   padding: 40px 0;
+  margin: 40px;
 }
 .popup {
   position: fixed;
