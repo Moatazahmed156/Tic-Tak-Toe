@@ -2,6 +2,7 @@
 
 A classic two-player Tic Tac Toe game built with vanilla JavaScript, HTML, and CSS. Players can enter their names, take turns making moves, and track scores across rounds.
 
+URL : https://moatazahmed156.github.io/Tic-Tak-Toe/
 ---
 
 ## 🚀 Features
