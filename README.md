@@ -12,7 +12,6 @@ A classic two-player Tic Tac Toe game built with vanilla JavaScript, HTML, and C
 - 🔁 "Play Again" and "New Game" functionality
 - 💡 Dynamic game state and UI updates without page reloads
 
----
 
 ## 🛠️ Technologies Used
 
@@ -20,7 +19,6 @@ A classic two-player Tic Tac Toe game built with vanilla JavaScript, HTML, and C
 - CSS3
 - JavaScript (Vanilla DOM Manipulation)
 
----
 
 ## 📦 Installation & Usage
 
